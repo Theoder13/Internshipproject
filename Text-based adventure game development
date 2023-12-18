@@ -1,0 +1,86 @@
+name = input('Enter your name: ')
+print(f'Greetings {name}! Welcome to the Mighty TP WORLD!')
+start = input('Would you rather play the game or perish? \n')
+if start == 'play':
+    print("Great! Let's play the game!")
+    setting = input('Want to go to the forest or the desert? \n')
+else:
+    print('Lame. Okay you\'re dead now...')
+    quit()
+
+if setting == 'forest':
+    print("Welcome to the mighty TP forest! You need to wait here or animals will kill you")
+    response = input("wait or run \n")
+    if response == 'wait':
+        print('Escaped from animals')
+        transport = input('you have got a jeep.leave or take \n')
+        if transport == 'leave':
+            print('you were killed by animals. you lose!')
+        elif transport == 'take':
+            print('driving jeep...Animals are trying to kill you')
+            drive = input('drive fast or slow \n')
+            if drive == 'fast':
+                print('escaped from animals but fuel dried')
+                decision = input('shout for help or walk silently towards road \n')
+                if decision == 'shout':
+                    print('animals came and killed you.You lose!')
+                elif decision == 'walk':
+                    print('reached road and won the game')
+                else:
+                    print('Invalid response! you lose!')    
+            elif drive == 'slow':
+                print('got bitten by an animal and died')
+                
+            else:
+                print('Inalid response! you lose!')
+        else:
+            print('Inalid response! you lose!')
+    elif response == 'run':
+        print('you were killed by animals. you lose!')
+    else:
+        print('invalid response! you lose!')
+        quit()
+
+elif setting == 'desert':
+    print("Welcome to the mighty Sahara Desert! You need to wait here or you will burn")
+    response = input("wait or run \n")
+    if response == 'wait':
+        print('Found an umbrella to withstand heat')
+        direction = input('Would you like to go to east or west \n')
+        if direction == 'east':
+            print('you found a coconut tree')
+            tree = input('wanna drink it? \n')
+            if tree == 'yes':
+                print('you are hydrated')
+                win = input('you see an airplane.Wanna shout for help? \n')
+                if win == 'yes':
+                    print('you are saved and you win the game')
+                elif win == 'no':
+                    print('you missed the chance to win and you lose!')
+                else:
+                    print('Invalid response! you lose!')
+            elif tree == 'no':
+                print('you lost energy and died')
+            else:
+                print('invalid response! you lose!')
+        elif direction == 'west':
+            print('you found a date palm')
+            fruit = input('wanna eat it? \n')
+            if fruit == 'yes':
+                print('you are well fed and you win the game')
+            elif fruit == 'no':
+                print('you died from hunger')
+            else:
+                print('invalid response! you lose!')
+        else:
+                print('invalid response! you lose!')
+        
+    elif response == 'run':
+        print('You died!')
+    else:
+        print('invalid response! you lose!')
+        quit()
+
+else:
+        print('invalid response! you lose!')
+        quit()
