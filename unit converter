@@ -1,0 +1,105 @@
+def weight_converter():
+    print("Weight Converter")
+    print("1. Kilograms to Pounds")
+    print("2. Pounds to Kilograms")
+    print("3. Grams to Milligrams")
+    print("4. Milligrams to Grams")
+    
+    choice = int(input("Enter your choice (1-4): "))
+    
+    if choice == 1:
+        kg = float(input("Enter weight in kilograms: "))
+        pounds = kg * 2.20462
+        print(f"{kg} kilograms is equal to {pounds} pounds.")
+    elif choice == 2:
+        pounds = float(input("Enter weight in pounds: "))
+        kg = pounds / 2.20462
+        print(f"{pounds} pounds is equal to {kg} kilograms.")
+    elif choice == 3:
+        grams = float(input("Enter weight in grams: "))
+        milligrams = grams * 1000
+        print(f"{grams} grams is equal to {milligrams} milligrams.")
+    elif choice == 4:
+        milligrams = float(input("Enter weight in milligrams: "))
+        grams = milligrams / 1000
+        print(f"{milligrams} milligrams is equal to {grams} grams.")
+    else:
+        print("Invalid choice")
+
+def length_converter():
+    print("Length Converter")
+    print("1. Meters to Feet")
+    print("2. Feet to Meters")
+    print("3. Centimeters to Millimeters")
+    print("4. Millimeters to Centimeters")
+    
+    choice = int(input("Enter your choice (1-4): "))
+    
+    if choice == 1:
+        meters = float(input("Enter length in meters: "))
+        feet = meters * 3.28084
+        print(f"{meters} meters is equal to {feet} feet.")
+    elif choice == 2:
+        feet = float(input("Enter length in feet: "))
+        meters = feet / 3.28084
+        print(f"{feet} feet is equal to {meters} meters.")
+    elif choice == 3:
+        centimeters = float(input("Enter length in centimeters: "))
+        millimeters = centimeters * 10
+        print(f"{centimeters} centimeters is equal to {millimeters} millimeters.")
+    elif choice == 4:
+        millimeters = float(input("Enter length in millimeters: "))
+        centimeters = millimeters / 10
+        print(f"{millimeters} millimeters is equal to {centimeters} centimeters.")
+    else:
+        print("Invalid choice")
+
+def temperature_converter():
+    print("Temperature Converter")
+    print("1. Celsius to Fahrenheit")
+    print("2. Fahrenheit to Celsius")
+    print("3. Celsius to Kelvin")
+    print("4. Kelvin to Celsius")
+    
+    choice = int(input("Enter your choice (1-4): "))
+    
+    if choice == 1:
+        celsius = float(input("Enter temperature in Celsius: "))
+        fahrenheit = (celsius * 9/5) + 32
+        print(f"{celsius} degrees Celsius is equal to {fahrenheit} degrees Fahrenheit.")
+    elif choice == 2:
+        fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+        celsius = (fahrenheit - 32) * 5/9
+        print(f"{fahrenheit} degrees Fahrenheit is equal to {celsius} degrees Celsius.")
+    elif choice == 3:
+        celsius = float(input("Enter temperature in Celsius: "))
+        kelvin = celsius + 273.15
+        print(f"{celsius} degrees Celsius is equal to {kelvin} Kelvin.")
+    elif choice == 4:
+        kelvin = float(input("Enter temperature in Kelvin: "))
+        celsius = kelvin - 273.15
+        print(f"{kelvin} Kelvin is equal to {celsius} degrees Celsius.")
+    else:
+        print("Invalid choice")
+
+if __name__ == "__main__":
+    while True:
+        print("\nUnit Converter Menu:")
+        print("1. Weight Converter")
+        print("2. Length Converter")
+        print("3. Temperature Converter")
+        print("4. Quit")
+        
+        choice = int(input("Enter your choice (1-4): "))
+        
+        if choice == 1:
+            weight_converter()
+        elif choice == 2:
+            length_converter()
+        elif choice == 3:
+            temperature_converter()
+        elif choice == 4:
+            print("Exiting the unit converter. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 4.")
